@@ -1,0 +1,25 @@
+<!--
+  ~ Copyright (c) Akveo 2019. All Rights Reserved.
+  ~ Licensed under the Single Application / Multi Application License.
+  ~ See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
+  -->
+
+<div class="row">
+  <ng-container *ngIf="devices">
+    <div class="col-xxxl-3 col-md-6" *ngFor="let device of devices">
+      <ngx-status-card
+        [title]="device.name"
+        [on]="device.isOn"
+        [type]="device.settings.type"
+        (statusChanged)="changeDeviceStatus(device, $event)"
+      >
+        <i [ngClass]="device.settings.iconClass"></i>
+      </ngx-status-card>
+    </div>
+  </ng-container>
+  <ng-container *ngIf="!devices">
+    <div class="col-xxxl-3 col-md-6" *ngFor="let i of [1, 2, 3, 4]">
+      <div [nbSpinner]="!devices"><ngx-status-card-placeholder></ngx-status-card-placeholder></div>
+    </div>
+  </ng-container>
+</div>

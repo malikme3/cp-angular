@@ -1,16 +1,11 @@
-/*
- * Copyright (c) Akveo 2019. All Rights Reserved.
- * Licensed under the Single Application / Multi Application License.
- * See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
- */
+
 
 import { Injectable } from '@angular/core';
-import { of as observableOf,  Observable } from 'rxjs';
+import { of as observableOf, Observable } from 'rxjs';
 import { Device, DevicesData } from '../../interfaces/iot/devices';
 
 @Injectable()
 export class DevicesService extends DevicesData {
-
   private data: Device[] = [
     {
       id: 1,
@@ -21,7 +16,8 @@ export class DevicesService extends DevicesData {
         iconClass: 'nb-lightbulb',
         type: 'primary',
       },
-    }, {
+    },
+    {
       id: 2,
       name: 'Roller Shades',
       isOn: true,
@@ -30,16 +26,18 @@ export class DevicesService extends DevicesData {
         iconClass: 'nb-roller-shades',
         type: 'success',
       },
-    }, {
+    },
+    {
       id: 3,
       name: 'Wireless Audio',
       isOn: true,
       type: 'WirelessAudio',
       settings: {
-        iconClass: 'nb-audio',
+        iconClass: 'nb-checkmark-circle',
         type: 'info',
       },
-    }, {
+    },
+    {
       id: 4,
       name: 'Coffee Maker',
       isOn: true,
@@ -51,8 +49,55 @@ export class DevicesService extends DevicesData {
     },
   ];
 
+  private services: Device[] = [
+    {
+      id: 1,
+      name: 'Job Placement',
+      isOn: true,
+      type: 'Light',
+      settings: {
+        iconClass: 'job',
+        type: 'primary',
+      },
+    },
+    {
+      id: 2,
+      name: 'Resume Help',
+      isOn: true,
+      type: 'RollerShades',
+      settings: {
+        iconClass: 'resume',
+        type: 'success',
+      },
+    },
+    {
+      id: 3,
+      name: 'Interview Prep',
+      isOn: true,
+      type: 'WirelessAudio',
+      settings: {
+        iconClass: 'interview',
+        type: 'warning',
+      },
+    },
+    {
+      id: 4,
+      name: 'Networking',
+      isOn: true,
+      type: 'CoffeeMaker',
+      settings: {
+        iconClass: 'net-work',
+        type: 'warning',
+      },
+    },
+  ];
+
   list(): Observable<Device[]> {
     return observableOf(this.data);
+  }
+
+  servicesList(): Observable<Device[]> {
+    return observableOf(this.services);
   }
 
   edit(device: Device): Observable<Device> {

@@ -24,15 +24,20 @@
 <div [formGroup]="loginForm" aria-labelledby="title">
   <div class="form-control-group">
     <label for="input-email">Email address:</label>
-    <input  nbInput
-            fullWidth
-            id="input-email"
-            formControlName="email"
-            [status]="email.dirty ? (email.invalid  ? 'danger' : 'success') : ''"
-            [attr.aria-invalid]="email.invalid && email.touched ? true : null"
-            placeholder="Email address">
-    <ngx-validation-message label="Email address" [showPattern]="email?.hasError('pattern') && email.touched"
-      [showRequired]="email?.errors?.required && email.touched"></ngx-validation-message>
+    <input
+      nbInput
+      fullWidth
+      id="input-email"
+      formControlName="email"
+      [status]="email.dirty ? (email.invalid ? 'danger' : 'success') : ''"
+      [attr.aria-invalid]="email.invalid && email.touched ? true : null"
+      placeholder="Email address"
+    />
+    <ngx-validation-message
+      label="Email address"
+      [showPattern]="email?.hasError('pattern') && email.touched"
+      [showRequired]="email?.errors?.required && email.touched"
+    ></ngx-validation-message>
   </div>
 
   <div class="form-control-group">
@@ -40,27 +45,38 @@
       <label class="label" for="input-password">Password:</label>
       <a class="forgot-password caption-2" routerLink="../request-password">Forgot Password?</a>
     </span>
-    <input  nbInput
-            fullWidth
-            id="input-password"
-            formControlName="password"
-            type="password"
-            [status]="password.dirty ? (password.invalid  ? 'danger' : 'success') : ''"
-            placeholder="Password">
-    <ngx-validation-message label="Password" [showMinLength]="password?.hasError('minlength') && password.touched"
+    <input
+      nbInput
+      fullWidth
+      id="input-password"
+      formControlName="password"
+      type="password"
+      [status]="password.dirty ? (password.invalid ? 'danger' : 'success') : ''"
+      placeholder="Password"
+    />
+    <ngx-validation-message
+      label="Password"
+      [showMinLength]="password?.hasError('minlength') && password.touched"
       [showMaxLength]="password?.hasError('maxlength') && password.touched"
       [showRequired]="password?.errors?.required && password.touched"
       [minLength]="minLength"
-      [maxLength]="maxLength"></ngx-validation-message>
+      [maxLength]="maxLength"
+    ></ngx-validation-message>
   </div>
 
   <div class="form-control-group accept-group">
     <nb-checkbox name="rememberMe" *ngIf="rememberMe">Remember me</nb-checkbox>
   </div>
 
-  <button nbButton fullWidth status="primary" size="large"
-   (click)="login()" [disabled]="submitted || !loginForm.valid"
-    [class.btn-pulse]="submitted">
+  <button
+    nbButton
+    fullWidth
+    status="primary"
+    size="large"
+    (click)="login()"
+    [disabled]="submitted || !loginForm.valid"
+    [class.btn-pulse]="submitted"
+  >
     Log In
   </button>
 </div>
@@ -69,19 +85,23 @@
   or enter with:
   <div class="socials">
     <ng-container *ngFor="let socialLink of socialLinks">
-      <a *ngIf="socialLink.link"
-         [routerLink]="socialLink.link"
-         [attr.target]="socialLink.target"
-         [attr.class]="socialLink.icon"
-         [class.with-icon]="socialLink.icon">
+      <a
+        *ngIf="socialLink.link"
+        [routerLink]="socialLink.link"
+        [attr.target]="socialLink.target"
+        [attr.class]="socialLink.icon"
+        [class.with-icon]="socialLink.icon"
+      >
         <nb-icon *ngIf="socialLink.icon; else title" [icon]="socialLink.icon"></nb-icon>
         <ng-template #title>{{ socialLink.title }}</ng-template>
       </a>
-      <a *ngIf="socialLink.url"
-         [attr.href]="socialLink.url"
-         [attr.target]="socialLink.target"
-         [attr.class]="socialLink.icon"
-         [class.with-icon]="socialLink.icon">
+      <a
+        *ngIf="socialLink.url"
+        [attr.href]="socialLink.url"
+        [attr.target]="socialLink.target"
+        [attr.class]="socialLink.icon"
+        [class.with-icon]="socialLink.icon"
+      >
         <nb-icon *ngIf="socialLink.icon; else title" [icon]="socialLink.icon"></nb-icon>
         <ng-template #title>{{ socialLink.title }}</ng-template>
       </a>

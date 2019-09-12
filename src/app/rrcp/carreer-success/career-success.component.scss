@@ -1,0 +1,87 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+  .solar-card nb-card-header {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    ngx-traffic {
+      display: none;
+    }
+    ::ng-deep nb-layout-column {
+      justify-content: center;
+      display: flex;
+    }
+  }
+}
+
+.home-page {
+  margin: 0rem;
+  background: url('pic/19741.jpg');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.net-work {
+  margin: 0.5rem;
+  background: url('pic/net-work.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.resume {
+  margin: 0.5rem;
+  background: url('pic/resume-01.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.job {
+  margin: 0.5rem;
+  background: url('pic/hired.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+.interview {
+  margin: 0.5rem;
+  background: url('pic/interview.png');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}

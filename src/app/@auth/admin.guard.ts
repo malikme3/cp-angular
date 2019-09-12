@@ -1,8 +1,4 @@
-/*
- * Copyright (c) Akveo 2019. All Rights Reserved.
- * Licensed under the Single Application / Multi Application License.
- * See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
- */
+
 import { Injectable } from '@angular/core';
 import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
@@ -18,14 +14,10 @@ export class AdminGuard implements CanActivate {
     route: ActivatedRouteSnapshot,
     state: RouterStateSnapshot,
   ): Observable<boolean> | Promise<boolean> | boolean {
-    return this.roleProvider.getRole().pipe(
-      map(role => {
+    return this.roleProvider.getRole()
+      .pipe(map(role => {
         const roles = role instanceof Array ? role : [role];
-        // tslint:disable-next-line:no-console
-        console.log('Roles: ' + roles);
-
         return roles.some(x => x && x.toLowerCase() === ROLES.ADMIN);
-      }),
-    );
+      }));
   }
 }

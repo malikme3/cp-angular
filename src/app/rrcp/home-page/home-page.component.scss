@@ -1,0 +1,43 @@
+@import '../../@theme/styles/themes';
+@import '~bootstrap/scss/mixins/breakpoints';
+@import '~@nebular/theme/styles/global/breakpoints';
+
+@include nb-install-component() {
+  .solar-card nb-card-header {
+    border: none;
+    padding-bottom: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    ngx-traffic {
+      display: none;
+    }
+    ::ng-deep nb-layout-column {
+      justify-content: center;
+      display: flex;
+    }
+  }
+}
+
+.home-page {
+  background: url('pic/h-laptop.svg');
+
+  width: 100%;
+  background-size: cover;
+  height: 100%;
+
+  /* Center and scale the image nicely */
+  background-position: center;
+
+  background-repeat: repeat;
+}
+
+.card-bck {
+  color: whitesmoke;
+  align-content: center;
+  font-family: Open Sans, sans-serif;
+  font-size: 1.1375rem;
+  font-weight: 1000;
+  line-height: 1.5rem;
+  background-color: rgb(12, 40, 68);
+}

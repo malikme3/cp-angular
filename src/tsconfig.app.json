@@ -14,10 +14,10 @@
   },
   "exclude": [
     "test.ts",
+    "**/*.spec.ts",
     "**/*.ecom.ts",
     "**/*.iot.ts",
     "**/*.starter.ts",
-    "**/*.spec.ts",
     "../node_modules/@nebular/**/*.spec.ts"
   ],
   "include": [

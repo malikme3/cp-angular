@@ -1,0 +1,18 @@
+<div class="lists row">
+  <!-- <nb-card size="giant" class="home-page col-md-12 col-lg-12 col-xxxl-12"> </nb-card> -->
+
+  <nb-card size="giant" class="home-page">
+    <ng-container *ngIf="devices">
+      <div class="home-page" *ngFor="let device of devices">
+        <ngx-status-card
+          [title]="device.name"
+          [on]="device.isOn"
+          [type]="device.settings.type"
+          (statusChanged)="changeDeviceStatus(device, $event)"
+        >
+          <i [ngClass]="device.settings.iconClass"> </i>
+        </ngx-status-card>
+      </div>
+    </ng-container>
+  </nb-card>
+</div>

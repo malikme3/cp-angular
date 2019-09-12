@@ -1,8 +1,4 @@
-/*
- * Copyright (c) Akveo 2019. All Rights Reserved.
- * Licensed under the Single Application / Multi Application License.
- * See LICENSE_SINGLE_APP / LICENSE_MULTI_APP in the 'docs' folder for license information on type of purchased license.
- */
+
 
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
@@ -32,9 +28,8 @@ import {
   NbSpinnerModule,
   NbDatepickerModule,
 } from '@nebular/theme';
-import { UserEditComponent } from './user-edit/user-edit.component';
 
-const NB_MODULES = [
+const  NB_MODULES = [
   NbActionsModule,
   NbButtonModule,
   NbCardModule,
@@ -60,8 +55,12 @@ const NB_MODULES = [
     ReactiveFormsModule,
     ...NB_MODULES,
   ],
-  declarations: [UsersComponent, UserComponent, UserEditComponent],
-  entryComponents: [],
+  declarations: [
+    UsersComponent,
+    UserComponent,
+  ],
+  entryComponents: [
+  ],
   providers: [],
 })
-export class UsersModule {}
+export class UsersModule { }
