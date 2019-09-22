@@ -1,15 +1,27 @@
 <nb-card size="giant">
-  <nb-card-header [ngClass]="'card-bck'">
-    JUMPSTART YOUR NEW CAREER
-  </nb-card-header>
-  <nb-card-body [ngClass]="'home-page'"></nb-card-body>
+  <nb-card-body [ngClass]="'home-page'">
+    <header class="v-header container">
+      <div class="fullscreen-video-wrap ">
+        <!--  https://www.videvo.net/video/typing-on-computer-white-bg/4475/ -->
+        <!-- DO NOT USE THIS VIDEO, I JUST NEEDED A HOSTED VIDEO FOR THIS CODEPEN> USE THE ONE ABOVE -->
+        <video src="../../../assets/video/2.mp4" autoplay="" loop=""></video>
+      </div>
+      <div class="header-overlay"></div>
+      <div class="header-content text-md-center">
+        <nb-alert status="info">
+          <!-- <strong style="float: center; text-align: center; color: red;  ">F</strong> Learn the most -->
 
-  <nb-alert status="info">
-    <!-- <strong style="float: center; text-align: center; color: red;  ">F</strong> Learn the most -->
-    <nb-card-header [ngClass]="'card-bck'">
-      Full Stack Web Development
-    </nb-card-header>
-    Learn the most popular language for making websites, web apps, games, animations, and mobile applications. In this
-    track you'll learn front-end and back-end JavaScript, some of today's most versatile and sought-after skills.
-  </nb-alert>
+          Learn the most popular language for making websites, web apps, games, animations, and mobile applications. In
+          this track you'll learn front-end and back-end JavaScript, some of today's most versatile and sought-after
+          skills.
+        </nb-alert>
+        <!-- <h1>Welcome Everyone</h1>
+        <p>
+          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam
+          amet impedit explicabo? Debitis quasi ullam aperiam!
+        </p> -->
+        <a class="btn">Find Out More</a>
+      </div>
+    </header>
+  </nb-card-body>
 </nb-card>
