@@ -64,7 +64,7 @@ body {
 }
 
 .container {
-  max-width: 960px;
+  max-width: 100%;
   padding-left: 1rem;
   padding-right: 1rem;
   margin: auto;
@@ -90,7 +90,7 @@ body {
   position: absolute;
   top: 0;
   left: 0;
-  width: 100vw;
+  width: 100%;
   z-index: 1;
   background: #225470;
   opacity: 0.85;
@@ -123,5 +123,17 @@ body {
   .container {
     padding-right: 3rem;
     padding-left: 3rem;
+  }
+}
+
+:host ::ng-deep nb-stepper .step-content {
+  text-align: center;
+
+  button {
+    cursor: pointer;
+    margin: 0.5rem;
+  }
+  .prev-button {
+    margin-right: 1rem;
   }
 }
