@@ -1,5 +1,3 @@
-
-
 import { Component, OnDestroy, OnInit } from '@angular/core';
 import { NbMediaBreakpointsService, NbMenuService, NbSidebarService, NbThemeService } from '@nebular/theme';
 
@@ -14,7 +12,6 @@ import { UserStore } from '../../../@core/stores/user.store';
   templateUrl: './header.component.html',
 })
 export class HeaderComponent implements OnInit, OnDestroy {
-
   private destroy$: Subject<void> = new Subject<void>();
   userPictureOnly: boolean = false;
   user: any;
@@ -38,20 +35,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
     },
   ];
 
-  currentTheme = 'default';
+  currentTheme = 'dark';
 
   userMenu = this.getMenuItems();
 
-  constructor(private sidebarService: NbSidebarService,
-              private menuService: NbMenuService,
-              private themeService: NbThemeService,
-              private userStore: UserStore,
-              private layoutService: LayoutService,
-              private breakpointService: NbMediaBreakpointsService) {
-  }
+  constructor(
+    private sidebarService: NbSidebarService,
+    private menuService: NbMenuService,
+    private themeService: NbThemeService,
+    private userStore: UserStore,
+    private layoutService: LayoutService,
+    private breakpointService: NbMediaBreakpointsService,
+  ) {}
 
   getMenuItems() {
-    const userLink = this.user ?  '/pages/users/current/' : '';
+    const userLink = this.user ? '/pages/users/current/' : '';
     return [
       { title: 'Profile', link: userLink, queryParams: { profile: true } },
       { title: 'Log out', link: '/auth/logout' },
@@ -65,19 +63,21 @@ export class HeaderComponent implements OnInit, OnDestroy {
     this.userMenu = this.getMenuItems();
 
     const { xl } = this.breakpointService.getBreakpointsMap();
-    this.themeService.onMediaQueryChange()
+    this.themeService
+      .onMediaQueryChange()
       .pipe(
         map(([, currentBreakpoint]) => currentBreakpoint.width < xl),
         takeUntil(this.destroy$),
       )
-      .subscribe((isLessThanXl: boolean) => this.userPictureOnly = isLessThanXl);
+      .subscribe((isLessThanXl: boolean) => (this.userPictureOnly = isLessThanXl));
 
-    this.themeService.onThemeChange()
+    this.themeService
+      .onThemeChange()
       .pipe(
         map(({ name }) => name),
         takeUntil(this.destroy$),
       )
-      .subscribe(themeName => this.currentTheme = themeName);
+      .subscribe(themeName => (this.currentTheme = themeName));
   }
 
   ngOnDestroy() {
@@ -86,7 +86,8 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   changeTheme(themeName: string) {
-    this.userStore.setSetting(themeName)
+    this.userStore
+      .setSetting(themeName)
       .pipe(takeUntil(this.destroy$))
       .subscribe();
 
