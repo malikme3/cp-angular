@@ -10,6 +10,8 @@ import {
   NbListModule,
   NbIconModule,
   NbAlertModule,
+  NbStepperModule,
+  NbAccordionModule,
 } from '@nebular/theme';
 import { NgxEchartsModule } from 'ngx-echarts';
 
@@ -33,6 +35,8 @@ import { FormsModule } from '@angular/forms';
     NbButtonModule,
     NgxEchartsModule,
     NbAlertModule,
+    NbStepperModule,
+    NbAccordionModule,
   ],
   declarations: [HomePageComponent],
 })

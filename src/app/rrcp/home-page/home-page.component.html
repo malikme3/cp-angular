@@ -1,27 +1,40 @@
-<nb-card size="giant">
-  <nb-card-body [ngClass]="'home-page'">
-    <header class="v-header container">
-      <div class="fullscreen-video-wrap ">
-        <!--  https://www.videvo.net/video/typing-on-computer-white-bg/4475/ -->
-        <!-- DO NOT USE THIS VIDEO, I JUST NEEDED A HOSTED VIDEO FOR THIS CODEPEN> USE THE ONE ABOVE -->
-        <video src="../../../assets/video/2.mp4" autoplay="" loop=""></video>
-      </div>
-      <div class="header-overlay"></div>
-      <div class="header-content text-md-center">
-        <nb-alert status="info">
-          <!-- <strong style="float: center; text-align: center; color: red;  ">F</strong> Learn the most -->
+<nb-card size="large" status="info">
+  <nb-card-header>Full-Stack Development Course!!</nb-card-header>
+  <nb-card-body>
+    <div class="fullscreen-video-wrap header-overlay">
+      <video src="../../../assets/video/3.mp4" autoplay="true" loop="true"></video>
+    </div>
 
-          Learn the most popular language for making websites, web apps, games, animations, and mobile applications. In
-          this track you'll learn front-end and back-end JavaScript, some of today's most versatile and sought-after
-          skills.
-        </nb-alert>
-        <!-- <h1>Welcome Everyone</h1>
-        <p>
-          Lorem ipsum, dolor sit amet consectetur adipisicing elit. Id temporibus perferendis necessitatibus numquam
-          amet impedit explicabo? Debitis quasi ullam aperiam!
-        </p> -->
-        <a class="btn">Find Out More</a>
-      </div>
-    </header>
+    <nb-accordion multi>
+      <nb-accordion-item [collapsed]="false">
+        <nb-accordion-item-header>
+          Product Details
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a
+          name for any diffuse astronomical object, including galaxies beyond the Milky Way.
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+
+      <nb-accordion-item>
+        <nb-accordion-item-header>
+          Reviews
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a
+          name for any diffuse astronomical object, including galaxies beyond the Milky Way.
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+
+      <nb-accordion-item>
+        <nb-accordion-item-header>
+          Edit
+        </nb-accordion-item-header>
+        <nb-accordion-item-body>
+          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a
+          name for any diffuse astronomical object, including galaxies beyond the Milky Way.
+        </nb-accordion-item-body>
+      </nb-accordion-item>
+    </nb-accordion>
   </nb-card-body>
 </nb-card>

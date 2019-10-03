@@ -10,7 +10,6 @@ const routes: Routes = [
     loadChildren: () => import('./rrcp/rrcp.module').then(m => m.RRCpModule),
   },
   {
-    canActivate: [AuthGuard],
     path: 'pages',
     loadChildren: () => import('./pages/pages.module').then(m => m.PagesModule),
   },
