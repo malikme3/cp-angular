@@ -9,6 +9,7 @@ interface CardSettings {
 }
 
 @Component({
+  // tslint:disable-next-line:component-selector
   selector: 'rrcp-home-page',
   styleUrls: ['./home-page.component.scss'],
   templateUrl: './home-page.component.html',
@@ -87,5 +88,33 @@ export class HomePageComponent implements OnDestroy {
 
   ngOnDestroy() {
     this.alive = false;
+  }
+
+  fullStackInfo = [
+    {
+      title: 'Front Teir',
+      details: `Starting from html/css/javascript biggners ,
+         to advance javascript and Angular as primary framework`,
+      keys: ['HTML5', 'SASS', 'TypeScript', 'Angular 8', 'ECMAScript 6'],
+      expanded: true,
+    },
+    {
+      title: 'Middle Teir',
+      details: `Starting from html/css/javascript biggners ,
+         to advance javascript and Angular as primary framework`,
+      keys: ['Node.Js', 'express', 'postman', 'lodash', 'git'],
+      expanded: false,
+    },
+    {
+      title: 'Back End Teir',
+      details: `starting from html/css/javascript biggners ,
+         to advance javascript and Angular as primary framework`,
+      keys: ['MongoDb', 'DynamoDb', 'MySQL'],
+      expanded: false,
+    },
+  ];
+  name;
+  test() {
+    alert(this.name);
   }
 }

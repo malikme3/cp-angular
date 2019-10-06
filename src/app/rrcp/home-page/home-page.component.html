@@ -1,38 +1,27 @@
-<nb-card size="large" status="info">
-  <nb-card-header>Full-Stack Development Course!!</nb-card-header>
+<nb-card size="large" status="success">
+  <nb-card-header [ngClass]="'header-text'">Full-Stack Development Course!!</nb-card-header>
   <nb-card-body>
     <div class="fullscreen-video-wrap header-overlay">
       <video src="../../../assets/video/3.mp4" autoplay="true" loop="true"></video>
     </div>
-
+    <nb-stepper orientation="horizontal">
+      <nb-step *ngFor="let a of fullStackInfo; let i = index" [label]="a.title">
+        <ol (timeupdate)="test()">
+          <li *ngFor="let k of a.keys">{{ k }}</li>
+        </ol>
+      </nb-step>
+    </nb-stepper>
     <nb-accordion multi>
-      <nb-accordion-item [collapsed]="false">
-        <nb-accordion-item-header>
-          Product Details
+      <nb-accordion-item *ngFor="let fws of fullStackInfo" [expanded]="fws.expanded">
+        <nb-stepper orientation="horizontal">
+          <nb-step [label]="fws.title"> </nb-step>
+        </nb-stepper>
+        <nb-accordion-item-header [ngClass]="'accordion-item-header'">
+          {{ fws.title }}
         </nb-accordion-item-header>
         <nb-accordion-item-body>
-          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a
-          name for any diffuse astronomical object, including galaxies beyond the Milky Way.
-        </nb-accordion-item-body>
-      </nb-accordion-item>
-
-      <nb-accordion-item>
-        <nb-accordion-item-header>
-          Reviews
-        </nb-accordion-item-header>
-        <nb-accordion-item-body>
-          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a
-          name for any diffuse astronomical object, including galaxies beyond the Milky Way.
-        </nb-accordion-item-body>
-      </nb-accordion-item>
-
-      <nb-accordion-item>
-        <nb-accordion-item-header>
-          Edit
-        </nb-accordion-item-header>
-        <nb-accordion-item-body>
-          A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases. Originally, nebula was a
-          name for any diffuse astronomical object, including galaxies beyond the Milky Way.
+          {{ fws.details }}
+          <p>{{ fws.keys }}</p>
         </nb-accordion-item-body>
       </nb-accordion-item>
     </nb-accordion>

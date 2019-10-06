@@ -58,7 +58,6 @@ export class HeaderComponent implements OnInit, OnDestroy {
 
   ngOnInit() {
     this.currentTheme = this.themeService.currentTheme;
-
     this.user = this.userStore.getUser();
     this.userMenu = this.getMenuItems();
 
@@ -78,6 +77,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
         takeUntil(this.destroy$),
       )
       .subscribe(themeName => (this.currentTheme = themeName));
+    this.changeTheme('cosmic');
   }
 
   ngOnDestroy() {
@@ -86,6 +86,7 @@ export class HeaderComponent implements OnInit, OnDestroy {
   }
 
   changeTheme(themeName: string) {
+    // alert(themeName);
     this.userStore
       .setSetting(themeName)
       .pipe(takeUntil(this.destroy$))

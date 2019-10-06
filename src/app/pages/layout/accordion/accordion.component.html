@@ -79,4 +79,15 @@
       </nb-accordion-item>
     </nb-accordion>
   </div>
+  <nb-accordion multi *ngFor="let fws of fullStackInfo">
+    <nb-accordion-item [expanded]="fws.expanded">
+      <nb-accordion-item-header [ngClass]="'accordion-item-header'">
+        {{ fws.title }}
+      </nb-accordion-item-header>
+      <nb-accordion-item-body>
+        {{ fws.details }}
+        <p>{{ fws.keys }}</p>
+      </nb-accordion-item-body>
+    </nb-accordion-item>
+  </nb-accordion>
 </div>

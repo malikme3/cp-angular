@@ -12,13 +12,33 @@
     ngx-traffic {
       display: none;
     }
+    /deep/ nb-accordion-item.expanded nb-accordion-item-body {
+      .ng-trigger-accordionItemBody {
+        height: auto !important;
+      }
+    }
     ::ng-deep nb-layout-column {
       justify-content: center;
       display: flex;
     }
+    ::ng-deep nb-accordion-item.expanded nb-accordion-item-body {
+      .ng-trigger-accordionItemBody {
+        height: auto !important;
+      }
+    }
+  }
+  /deep/ nb-accordion-item.expanded nb-accordion-item-body {
+    .ng-trigger-accordionItemBody {
+      height: auto !important;
+    }
   }
 }
 
+/deep/ nb-accordion-item.expanded nb-accordion-item-body {
+  .ng-trigger-accordionItemBody {
+    height: auto !important;
+  }
+}
 .home-page {
   background: url('pic/h-laptop.svg');
 
@@ -89,15 +109,21 @@ body {
   min-width: 100%;
 }
 
+.accordion-item-header {
+  color: #42e6a4;
+  font-weight: bold;
+}
+
 .header-overlay {
   height: 100%;
   position: absolute;
   top: 0;
   left: 0;
   width: 100vw;
-  z-index: -1;
+  z-index: 0.01;
   background: #225470;
-  opacity: 0.85;
+  opacity: 0.25;
+  pointer-events: none;
 }
 
 .header-content {
@@ -126,6 +152,10 @@ body {
   font-size: 1.5rem;
   display: block;
   padding-bottom: 2rem;
+}
+
+.header-text {
+  text-align: center;
 }
 
 .btn {
