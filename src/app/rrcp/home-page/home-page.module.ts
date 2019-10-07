@@ -18,6 +18,7 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { ThemeModule } from '../../@theme/theme.module';
 import { HomePageComponent } from './home-page.component';
 import { FormsModule } from '@angular/forms';
+import { RrcpStrepperComponent } from '../components/rrcp-strepper/rrcp-strepper.component';
 
 @NgModule({
   imports: [
@@ -38,6 +39,6 @@ import { FormsModule } from '@angular/forms';
     NbStepperModule,
     NbAccordionModule,
   ],
-  declarations: [HomePageComponent],
+  declarations: [HomePageComponent, RrcpStrepperComponent],
 })
 export class HomePageModule {}

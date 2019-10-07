@@ -1,0 +1,9 @@
+<nb-stepper orientation="horizontal">
+  <p *ngFor="let a of fullStackContents; let i = index">
+    <nb-step [label]="a.title">
+      <ol (mouseenter)="callParent(i)">
+        <li *ngFor="let k of a.keys">{{ k }}</li>
+      </ol>
+    </nb-step>
+  </p>
+</nb-stepper>
