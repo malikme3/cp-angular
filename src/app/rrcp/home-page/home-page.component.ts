@@ -1,13 +1,4 @@
-import { Component, OnDestroy, ViewChild, AfterViewInit } from '@angular/core';
-import { NbThemeService } from '@nebular/theme';
-import { takeWhile } from 'rxjs/operators';
-import { RrcpStrepperComponent } from '../components/rrcp-strepper/rrcp-strepper.component';
-
-interface CardSettings {
-  title: string;
-  iconClass: string;
-  type: string;
-}
+import { Component, OnDestroy } from '@angular/core';
 
 @Component({
   selector: 'rrcp-home-page',
@@ -17,7 +8,7 @@ interface CardSettings {
 export class HomePageComponent implements OnDestroy {
   fullStackInfo: any[];
 
-  constructor(private themeService: NbThemeService) {}
+  constructor() {}
 
   ngOnDestroy() {}
 

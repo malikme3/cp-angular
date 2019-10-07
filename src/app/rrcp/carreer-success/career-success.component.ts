@@ -1,14 +1,7 @@
 import { Component, OnDestroy } from '@angular/core';
-import { NbThemeService } from '@nebular/theme';
 import { takeWhile } from 'rxjs/operators';
 import { Device, DevicesData } from '../../@core/interfaces/iot/devices';
 import { SolarEnergyStatistics, SolarData } from '../../@core/interfaces/iot/solar';
-
-interface CardSettings {
-  title: string;
-  iconClass: string;
-  type: string;
-}
 
 @Component({
   selector: 'rrcp-career-success',

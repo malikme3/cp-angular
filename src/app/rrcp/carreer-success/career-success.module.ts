@@ -16,7 +16,6 @@ import { NgxEchartsModule } from 'ngx-echarts';
 import { ThemeModule } from '../../@theme/theme.module';
 import { CareerSuccessComponent } from './career-success.component';
 import { FormsModule } from '@angular/forms';
-import { StatusCardComponent } from '../../pages/dashboard/status-card/status-card.component';
 import { DashboardModule } from '../../pages/dashboard/dashboard.module';
 
 @NgModule({

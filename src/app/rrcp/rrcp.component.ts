@@ -1,6 +1,6 @@
 import { Component, OnDestroy } from '@angular/core';
 
-import { MENU_ITEMS, RRCpMenu } from './rrcp-menu';
+import { RRCpMenu } from './rrcp-menu';
 import { NbMenuItem } from '@nebular/theme';
 import { NbTokenService } from '@nebular/auth';
 import { InitUserService } from '../@theme/services/init-user.service';

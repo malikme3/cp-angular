@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, Output, EventEmitter, SimpleChanges } from '@angular/core';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { RrcpServicesService } from '../../services/rrcp-services.service';
 
 @Component({
@@ -10,7 +10,7 @@ export class RrcpStrepperComponent implements OnInit {
   @Output() childEventCall = new EventEmitter<any>();
   fullStackContents: any[];
 
-  constructor(private service: RrcpServicesService) {
+  constructor(service: RrcpServicesService) {
     this.fullStackContents = service.fullStackContents;
   }
 
@@ -19,7 +19,7 @@ export class RrcpStrepperComponent implements OnInit {
   }
 
   callParent(index: number) {
-    for (const [i, fwc] of this.fullStackContents.entries()) {
+    for (const [i] of this.fullStackContents.entries()) {
       if (index === i) {
         this.fullStackContents[i].expanded = true;
       } else {
