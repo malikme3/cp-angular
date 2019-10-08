@@ -1,13 +1,16 @@
 {
-	"folders": [
-		{
-			"path": "/Users/zulifqar.ahmad/Desktop/Meraki-101/cp-src/cp-angular"
-		},
-		{
-			"path": "/Users/zulifqar.ahmad/Desktop/Meraki-101/cp-src/cp-node"
-		}
-	],
-	"settings": {
-		"search.useGlobalIgnoreFiles": true
-	}
+  "folders": [
+    {
+      "path": "/Users/zulifqar.ahmad/Desktop/Meraki-101/cp-src/cp-angular"
+    },
+    {
+      "path": "/Users/zulifqar.ahmad/Desktop/Meraki-101/cp-src/cp-node"
+    },
+    {
+      "path": "/Users/zulifqar.ahmad/Desktop/Meraki-101/cp-src/oct-07-node-starter-full"
+    }
+  ],
+  "settings": {
+    "search.useGlobalIgnoreFiles": true
+  }
 }

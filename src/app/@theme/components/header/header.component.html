@@ -3,7 +3,10 @@
     <a (click)="toggleSidebar()" href="#" class="sidebar-toggle">
       <nb-icon icon="menu-2-outline"></nb-icon>
     </a>
-    <a class="logo" href="#" (click)="navigateHome()">cp-<span>admin</span></a>
+    <nb-action class="user-action">
+      <nb-user [onlyPicture]="userPictureOnly" [picture]="'assets/images/cp-2.svg'"> </nb-user>
+    </nb-action>
+    <a class="logo" href="#" (click)="navigateHome()">coding-<span>point </span></a>
   </div>
   <nb-select [selected]="currentTheme" (selectedChange)="changeTheme($event)" status="primary">
     <nb-option *ngFor="let theme of themes" [value]="theme.value"> {{ theme.name }}</nb-option>
@@ -17,11 +20,10 @@
     </nb-action>
     <nb-action class="control-item" icon="email-outline"></nb-action>
     <nb-action class="control-item" icon="bell-outline"></nb-action>
-    <nb-action class="user-action" *nbIsGranted="['view', 'current-user']">
+    <nb-action class="user-action">
       <nb-user
-        [nbContextMenu]="userMenu"
         [onlyPicture]="userPictureOnly"
-        [name]="user?.name"
+        [name]="'Coding Point Terr'"
         [picture]="user?.picture | ngxAuthToken | async"
       >
       </nb-user>

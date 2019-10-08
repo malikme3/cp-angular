@@ -24,7 +24,7 @@ export class RRCpMenu {
         children: undefined,
       },
       {
-        title: 'User',
+        title: 'Why coding point?',
         icon: 'people-outline',
         link: '/pages/users/current',
         home: true,
@@ -32,7 +32,7 @@ export class RRCpMenu {
       },
 
       {
-        title: 'JOB Help',
+        title: 'Career Help',
         icon: 'keypad-outline',
         link: '/rrcp/career-success',
         children: undefined,
