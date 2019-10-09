@@ -4,7 +4,8 @@
       <nb-icon icon="menu-2-outline"></nb-icon>
     </a>
     <nb-action class="user-action">
-      <nb-user [onlyPicture]="userPictureOnly" [picture]="'assets/images/cp-2.svg'"> </nb-user>
+      <nb-user size="large" name="Coding Point" title="coding" [picture]="'assets/images/cp-2.svg'" onlyPicture>
+      </nb-user>
     </nb-action>
     <a class="logo" href="#" (click)="navigateHome()">coding-<span>point </span></a>
   </div>
@@ -21,12 +22,7 @@
     <nb-action class="control-item" icon="email-outline"></nb-action>
     <nb-action class="control-item" icon="bell-outline"></nb-action>
     <nb-action class="user-action">
-      <nb-user
-        [onlyPicture]="userPictureOnly"
-        [name]="'Coding Point Terr'"
-        [picture]="user?.picture | ngxAuthToken | async"
-      >
-      </nb-user>
+      <nb-user shape="rectangle" name="Coding Point" title="Round Rock" showName="false"></nb-user>
     </nb-action>
   </nb-actions>
 </div>

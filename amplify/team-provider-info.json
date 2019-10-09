@@ -1,0 +1,14 @@
+{
+    "rrcp": {
+        "awscloudformation": {
+            "AuthRoleName": "rrcp-rrcp-20191009110815-authRole",
+            "UnauthRoleArn": "arn:aws:iam::070094439426:role/rrcp-rrcp-20191009110815-unauthRole",
+            "AuthRoleArn": "arn:aws:iam::070094439426:role/rrcp-rrcp-20191009110815-authRole",
+            "Region": "us-east-1",
+            "DeploymentBucketName": "rrcp-rrcp-20191009110815-deployment",
+            "UnauthRoleName": "rrcp-rrcp-20191009110815-unauthRole",
+            "StackName": "rrcp-rrcp-20191009110815",
+            "StackId": "arn:aws:cloudformation:us-east-1:070094439426:stack/rrcp-rrcp-20191009110815/0157abd0-eaaf-11e9-9e39-0aa1af63e98c"
+        }
+    }
+}

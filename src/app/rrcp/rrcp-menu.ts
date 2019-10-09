@@ -24,7 +24,7 @@ export class RRCpMenu {
         children: undefined,
       },
       {
-        title: 'Why coding point?',
+        title: 'Why coding point ?',
         icon: 'people-outline',
         link: '/pages/users/current',
         home: true,
